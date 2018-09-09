@@ -1,10 +1,6 @@
 StackOverflow Share Remove User ID Userscript
 =============================================
 
-[![Build Status: Linux](https://img.shields.io/travis/kevinoid/stackoverflow-share-remove-user-id/master.svg?style=flat&label=build+on+linux)](https://travis-ci.org/kevinoid/stackoverflow-share-remove-user-id)
-[![Build Status: Windows](https://img.shields.io/appveyor/ci/kevinoid/stackoverflow-share-remove-user-id/master.svg?style=flat&label=build+on+windows)](https://ci.appveyor.com/project/kevinoid/stackoverflow-share-remove-user-id)
-[![Coverage](https://img.shields.io/codecov/c/github/kevinoid/stackoverflow-share-remove-user-id.svg?style=flat)](https://codecov.io/github/kevinoid/stackoverflow-share-remove-user-id?branch=master)
-
 A [userscript](https://en.wikipedia.org/wiki/Userscript) (viz.
 [Greasemonkey](https://www.greasespot.net/)/[Tampermonkey](https://tampermonkey.net/)/[Violentmonkey](https://violentmonkey.github.io/)
 script) to remove the User ID from short URLs displayed by the "Share" button
