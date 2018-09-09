@@ -63,7 +63,12 @@ function removeUserIDOnClick(evt) {
     const newUrl
       = oldUrl.replace(/^(https?:\/\/[^/]*\/[aq]\/[0-9]+)\/[0-9]+$/, '$1');
     if (newUrl === oldUrl) {
-      log.warn(`Ignoring unrecognized "Share" URL: ${oldUrl}`);
+      if (/^https?:\/\/[^/]*\/[aq]\/[0-9]+$/.test(oldUrl)) {
+        log.debug(`Ignoring "Share" URL without User ID: ${oldUrl}`);
+      } else {
+        log.warn(`Ignoring unrecognized "Share" URL: ${oldUrl}`);
+      }
+
       return;
     }
 
