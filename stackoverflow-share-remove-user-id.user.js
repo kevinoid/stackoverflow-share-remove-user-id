@@ -2,10 +2,7 @@
 // ==UserScript==
 // @name        Remove User ID from Stack Overflow Share URLs
 // @namespace   https://kevinlocke.name/userscripts
-// @description Removes the User ID from the URL displayed by the "Share"
-//   button for questions and answers on Stack Overflow and related sites.  For
-//   a description of why the User ID was added, see
-//   https://meta.stackoverflow.com/q/277769
+// @description Removes the User ID from the URL displayed by the "Share" button for questions and answers on Stack Overflow and related sites.  For a description of why the User ID was added, see https://meta.stackoverflow.com/q/277769
 // @match       https://*.askubuntu.com/*
 // @match       https://*.mathoverflow.net/*
 // @match       https://*.serverfault.com/*
