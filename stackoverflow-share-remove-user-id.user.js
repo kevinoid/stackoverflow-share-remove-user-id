@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // ==UserScript==
 // @name        Remove User ID from Stack Overflow Share URLs
 // @namespace   https://kevinlocke.name/userscripts
@@ -17,6 +18,7 @@
 // @grant       none
 // @supportURL https://github.com/kevinoid/stackoverflow-share-remove-user-id
 // ==/UserScript==
+/* eslint-enable max-len */
 
 // Note: Domain list from https://stackexchange.com/sites?view=list
 
