@@ -1,29 +1,32 @@
-Userscript Project Template
-============================
+StackOverflow Share Remove User ID Userscript
+=============================================
 
-[![Build Status: Linux](https://img.shields.io/travis/kevinoid/userscript-template/master.svg?style=flat&label=build+on+linux)](https://travis-ci.org/kevinoid/userscript-template)
-[![Build Status: Windows](https://img.shields.io/appveyor/ci/kevinoid/userscript-template/master.svg?style=flat&label=build+on+windows)](https://ci.appveyor.com/project/kevinoid/userscript-template)
-[![Coverage](https://img.shields.io/codecov/c/github/kevinoid/userscript-template.svg?style=flat)](https://codecov.io/github/kevinoid/userscript-template?branch=master)
+[![Build Status: Linux](https://img.shields.io/travis/kevinoid/stackoverflow-share-remove-user-id/master.svg?style=flat&label=build+on+linux)](https://travis-ci.org/kevinoid/stackoverflow-share-remove-user-id)
+[![Build Status: Windows](https://img.shields.io/appveyor/ci/kevinoid/stackoverflow-share-remove-user-id/master.svg?style=flat&label=build+on+windows)](https://ci.appveyor.com/project/kevinoid/stackoverflow-share-remove-user-id)
+[![Coverage](https://img.shields.io/codecov/c/github/kevinoid/stackoverflow-share-remove-user-id.svg?style=flat)](https://codecov.io/github/kevinoid/stackoverflow-share-remove-user-id?branch=master)
 
-A userscript (viz.
+A [userscript](https://en.wikipedia.org/wiki/Userscript) (viz.
 [Greasemonkey](https://www.greasespot.net/)/[Tampermonkey](https://tampermonkey.net/)/[Violentmonkey](https://violentmonkey.github.io/)
-script) project template with [codecov](https://codecov.io/),
-[coveralls](https://coveralls.io/), [ESLint](https://eslint.org/),
-[github\_changelog\_generator](https://github.com/github-changelog-generator/github-changelog-generator),
-[istanbul](https://istanbul.js.org/), [JSDoc](http://usejsdoc.org/), and
-[mocha](https://mochajs.org/).
+script) to remove the User ID from short URLs displayed by the "Share" button
+on [Stack Overflow](https://stackoverflow.com) and other [Stack Exchange
+sites](https://stackexchange.com/sites?view=list).
 
-It is the template that I am using for my own userscript projects, which
-represents my current preferences.  I am not advocating for these choices nor
-this template specifically, although I am happy to discuss or explain any
-choices made herein.  It is being published both for my own convenience and
-in case it may be useful to others with similar tastes.
+**Important:** [The User ID is used to attribute links to your user account for
+badges](https://meta.stackoverflow.com/q/277769).  Removing it will remove the
+link attribution and prevent you from obtaining those badges.
 
-It is based on my [Node Project
-Template](https://github.com/kevinoid/node-project-template).
+Given the above restriction, why would someone want to remove the User ID?
+For me, the value of shorter, anonymous, user-invariant URLs far outweighs the
+value of link attribution.  Others may have specific tools or use cases for
+Stack Overflow URLs which expect a certain format.
 
 
 ## Features
+
+- Removes the User ID from both question and answer URLs.
+- Re-selects the URL text after changing to preserve copy behavior.
+- Only removes the User ID from recognized URL formats.  If URL formats
+  change, there should be no risk of removing non-User ID URL parts.
 
 
 ## Installation
@@ -33,7 +36,7 @@ Greasemonkey](https://wiki.greasespot.net/Greasemonkey_Manual:Installing_Scripts
 [install in Tampermonkey](https://tampermonkey.net/faq.php#Q102), or install
 in any other userscript manager using:
 
-> [https://raw.githubusercontent.com/kevinoid/userscript-template/master/script-name.user.js](https://raw.githubusercontent.com/kevinoid/userscript-template/master/script-name.user.js)
+> [https://raw.githubusercontent.com/kevinoid/stackoverflow-share-remove-user-id/master/stackoverflow-share-remove-user-id.user.js](https://raw.githubusercontent.com/kevinoid/stackoverflow-share-remove-user-id/master/stackoverflow-share-remove-user-id.user.js)
 
 
 ## Contributing

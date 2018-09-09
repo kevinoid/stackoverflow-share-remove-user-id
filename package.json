@@ -1,19 +1,19 @@
 {
-  "name": "@kevinoid/userscript-template",
-  "version": "0.0.1",
-  "description": "A userscript (viz. Greasemonkey/Tampermonkey/Violentmonkey script) project template with codecov, coveralls, ESLint, github_changelog_generator, istanbul, JSDoc, and mocha.",
+  "name": "@kevinoid/stackoverflow-share-remove-user-id",
+  "version": "1.0.0",
+  "description": "A userscript (viz. Greasemonkey/Tampermonkey/Violentmonkey script) to remove the User ID from short URLs displayed by the \"Share\" button on Stack Overflow and other Stack Exchange sites.",
   "keywords": [
-    "project-template",
-    "template",
+    "stackexchange",
+    "stackoverflow",
     "userscript"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/kevinoid/userscript-template",
-  "bugs": "https://github.com/kevinoid/userscript-template/issues",
+  "homepage": "https://github.com/kevinoid/stackoverflow-share-remove-user-id",
+  "bugs": "https://github.com/kevinoid/stackoverflow-share-remove-user-id/issues",
   "author": "Kevin Locke <kevin@kevinlocke.name>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kevinoid/userscript-template.git"
+    "url": "https://github.com/kevinoid/stackoverflow-share-remove-user-id.git"
   },
   "main": "script-name.user.js",
   "//": "All scripts should run in POSIX sh and Windows cmd.exe",

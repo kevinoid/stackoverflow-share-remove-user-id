@@ -12,16 +12,17 @@ const vm = require('vm');
 
 // Load the userscript using jsdom
 const dom = new jsdom.JSDOM('', {runScripts: 'outside-only'});
-const scriptPath = path.join(__dirname, '..', 'script-name.user.js');
+const scriptPath
+  = path.join(__dirname, '..', 'stackoverflow-share-remove-user-id.user.js');
 const scriptCode = fs.readFileSync(scriptPath, {encoding: 'utf8'});
 const script = new vm.Script(scriptCode, {filename: scriptPath});
 dom.runVMScript(script);
-const scriptname = dom.window;
+// const removeUserId = dom.window;
 
-describe('scriptname', () => {
-  it('does something', (done) => {
-    // Assert something about scriptname here
-    scriptname.func();
-    done();
-  });
+describe('stackoverflow-share-remove-user-id', () => {
+  // Figure out something useful to unit test.
+  // it('does something', (done) => {
+  //   removeUserId.removeUserIDOnClick();
+  //   done();
+  // });
 });
