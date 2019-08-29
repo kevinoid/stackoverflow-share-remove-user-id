@@ -44,9 +44,11 @@ function forEach(arrayLike, callback, thisArg) {
  * "Share" link.
  */
 function removeUserIDOnClick(evt) {
-  if (!evt.target.classList.contains('short-link')) {
+  const {classList} = evt.target;
+  if (!classList.contains('js-share-link')
+      && !classList.contains('short-link')) {
     // click was not on "Share" link
-    log.debug('Ignoring click not on .short-link.');
+    log.debug('Ignoring click not on .js-share-link or .short-link.');
     return;
   }
 
