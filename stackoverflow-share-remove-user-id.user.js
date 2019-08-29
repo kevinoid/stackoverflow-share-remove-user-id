@@ -10,7 +10,7 @@
 // @match       https://*.stackexchange.com/*
 // @match       https://*.stackoverflow.com/*
 // @match       https://*.superuser.com/*
-// @version     1.0.0
+// @version     1.0.1
 // @license     MIT
 // @grant       none
 // @supportURL https://github.com/kevinoid/stackoverflow-share-remove-user-id
