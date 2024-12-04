@@ -27,13 +27,11 @@ const logLevel = 3;
 // Simple logging framework
 function notLogged() {}
 const log = {
-  /* eslint-disable no-console */
   error: logLevel < 5 ? console.error : notLogged,
   warn: logLevel < 4 ? console.warn : notLogged,
   info: logLevel < 3 ? console.info : notLogged,
   log: logLevel < 2 ? console.log : notLogged,
-  debug: logLevel < 1 ? (console.debug || console.log) : notLogged
-  /* eslint-enable no-console */
+  debug: logLevel < 1 ? console.debug || console.log : notLogged,
 };
 
 function forEach(arrayLike, callback, thisArg) {
@@ -42,9 +40,11 @@ function forEach(arrayLike, callback, thisArg) {
 
 /** Removes the User ID from the URL displayed in response to clicking a
  * "Share" link.
+ *
+ * @param {PointerEvent} evt Click event
  */
 function removeUserIDOnClick(evt) {
-  const {classList} = evt.target;
+  const { classList } = evt.target;
   if (!classList.contains('js-share-link')
       && !classList.contains('short-link')) {
     // click was not on "Share" link
@@ -61,8 +61,8 @@ function removeUserIDOnClick(evt) {
   forEach(inputs, (input) => {
     // Only change URLs with known formats to avoid breaking other URL formats
     const oldUrl = input.value;
-    const newUrl
-      = oldUrl.replace(/^(https?:\/\/[^/]*\/[aq]\/[0-9]+)\/[0-9]+$/, '$1');
+    const newUrl =
+      oldUrl.replace(/^(https?:\/\/[^/]*\/[aq]\/[0-9]+)\/[0-9]+$/, '$1');
     if (newUrl === oldUrl) {
       if (/^https?:\/\/[^/]*\/[aq]\/[0-9]+$/.test(oldUrl)) {
         log.debug(`Ignoring "Share" URL without User ID: ${oldUrl}`);
@@ -86,5 +86,5 @@ function removeUserIDOnClick(evt) {
 window.addEventListener(
   'load',
   () => document.addEventListener('click', removeUserIDOnClick, false),
-  false
+  false,
 );

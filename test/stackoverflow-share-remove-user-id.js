@@ -5,17 +5,17 @@
 
 'use strict';
 
-const fs = require('fs');
+const fs = require('node:fs');
 const jsdom = require('jsdom');
-const path = require('path');
-const vm = require('vm');
+const path = require('node:path');
+const vm = require('node:vm');
 
 // Load the userscript using jsdom
-const dom = new jsdom.JSDOM('', {runScripts: 'outside-only'});
-const scriptPath
-  = path.join(__dirname, '..', 'stackoverflow-share-remove-user-id.user.js');
-const scriptCode = fs.readFileSync(scriptPath, {encoding: 'utf8'});
-const script = new vm.Script(scriptCode, {filename: scriptPath});
+const dom = new jsdom.JSDOM('', { runScripts: 'outside-only' });
+const scriptPath =
+  path.join(__dirname, '..', 'stackoverflow-share-remove-user-id.user.js');
+const scriptCode = fs.readFileSync(scriptPath, { encoding: 'utf8' });
+const script = new vm.Script(scriptCode, { filename: scriptPath });
 dom.runVMScript(script);
 // const removeUserId = dom.window;
 
