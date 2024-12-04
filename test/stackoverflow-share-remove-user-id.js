@@ -16,7 +16,7 @@ const scriptPath =
   path.join(__dirname, '..', 'stackoverflow-share-remove-user-id.user.js');
 const scriptCode = fs.readFileSync(scriptPath, { encoding: 'utf8' });
 const script = new vm.Script(scriptCode, { filename: scriptPath });
-dom.runVMScript(script);
+script.runInContext(dom.getInternalVMContext());
 // const removeUserId = dom.window;
 
 describe('stackoverflow-share-remove-user-id', () => {
